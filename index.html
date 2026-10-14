@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>German A1 Full Mastery - Urdu & German Guide</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --text-color: #212529;
+            --card-bg: #ffffff;
+            --primary-color: #0d6efd;
+            --secondary-color: #198754;
+            --german-bg: #eef2f7;
+            --border-color: #dee2e6;
+        }
+
+        body.dark-mode {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --card-bg: #1e1e1e;
+            --primary-color: #3d8bfd;
+            --secondary-color: #2eca8b;
+            --german-bg: #2d3748;
+            --border-color: #444444;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            text-align: right;
+            transition: all 0.3s ease;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .top-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 10px auto;
+            padding: 0 20px;
+        }
+
+        button.theme-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .search-box {
+            width: 60%;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            font-size: 16px;
+        }
+
+        .main-layout {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            gap: 20px;
+            padding: 0 15px;
+        }
+
+        .sidebar {
+            flex: 1;
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        .sidebar a:hover {
+            background-color: var(--german-bg);
+        }
+
+        .content {
+            flex: 3;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+        }
+
+        .german-block {
+            direction: ltr;
+            text-align: left;
+            background-color: var(--german-bg);
+            padding: 12px 15px;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            margin: 10px 0;
+            white-space: pre-line;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        table, th, td {
+            border: 1px solid var(--border-color);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: right;
+        }
+
+        td.de {
+            direction: ltr;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .badge {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+        }
+
+        .quiz-option {
+            display: block;
+            margin: 8px 0;
+            padding: 10px;
+            background: var(--german-bg);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .main-layout {
+                flex-direction: column;
+            }
+            .search-box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>German A1 Complete Mastery (اردو + German)</h1>
+        <p>Goethe-Zertifikat A1 ki Buniyadi se lekar Exam-Ready Tayyari Tak</p>
+    </header>
+
+    <div class="top-controls">
+        <input type="text" id="searchInput" onkeyup="searchContent()" class="search-box" placeholder="Website mein talaash karein (e.g. Grammar, Verbs, Exam)...">
+        <button class="theme-btn" onclick="toggleTheme()">🌙 Dark/Light Mode</button>
+    </div>
+
+    <div class="main-layout">
+        
+        <!-- Navigation Sidebar -->
+        <nav class="sidebar">
+            <h3>🗂 Index / Fehrist</h3>
+            <ul>
+                <li><a href="#section1">1. Letters & Pronunciation (Aawazein)</a></li>
+                <li><a href="#section2">2. Ginti aur Numbers (Zahlen)</a></li>
+                <li><a href="#section3">3. Buniyadi Jumley aur Greetings</a></li>
+                <li><a href="#section4">4. Grammar A-Z (Articles, Nomen, Verbs)</a></li>
+                <li><a href="#section5">5. Rozmarrah ke Muwaad (Vocabulary)</a></li>
+                <li><a href="#section6">6. Exam Format (Hören, Lesen, Schreiben, Sprechen)</a></li>
+                <li><a href="#section7">7. Practice Quiz</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <div class="content">
+
+            <!-- Section 1 -->
+            <section id="section1" class="card searchable">
+                <h2>1. Alphabets & Special Letters (حروف تہجی)</h2>
+                <p>German zabaan mein standard English alphabets hote hain, lekin 4 khas letters zaroori hain:</p>
+                
+                <table>
+                    <tr>
+                        <th>Urdu Wazahāt</th>
+                        <th>German Letter</th>
+                        <th>Talaffuz (Pronunciation)</th>
+                        <th>Misaal (Example)</th>
+                    </tr>
+                    <tr>
+                        <td>A-Umlaut</td>
+                        <td class="de">Ä / ä</td>
+                        <td>'Ae' ki aawaz (like 'air')</td>
+                        <td class="de">Männer (Aadmi)</td>
+                    </tr>
+                    <tr>
+                        <td>O-Umlaut</td>
+                        <td class="de">Ö / ö</td>
+                        <td>Honth gol karke 'Er' bolna</td>
+                        <td class="de">Schön (Khoobsurat)</td>
+                    </tr>
+                    <tr>
+                        <td>U-Umlaut</td>
+                        <td class="de">Ü / ü</td>
+                        <td>Whistle ki position mein 'ee' bolna</td>
+                        <td class="de">Über (Upar/Kareeb)</td>
+                    </tr>
+                    <tr>
+                        <td>Eszett (Double S)</td>
+                        <td class="de">ß</td>
+                        <td>Sakhth 'S' ki aawaz</td>
+                        <td class="de">Straße (Sarak)</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- Section 2 -->
+            <section id="section2" class="card searchable">
+                <h2>2. Ginti / Numbers (Zahlen)</h2>
+                <p>German mein 21 ke baad ginti pehle unit phir ten bol kar banayi jaati hai (Jaise 21 = One and Twenty).</p>
+                
+                <div class="german-block">
+0 - null | 1 - eins | 2 - zwei | 3 - drei | 4 - vier
+5 - fünf | 6 - sechs | 7 - sieben | 8 - acht | 9 - neun
+10 - zehn | 11 - elf | 12 - zwölf | 13 - dreizehn | 20 - zwanzig
+21 - einundzwanzig (1 + aur + 20)
+100 - hundert | 1000 - tausend
+                </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section id="section3" class="card searchable">
+                <h2>3. Daily Greetings & Introduction (تعارف)</h2>
+                <p>Apna ta'aruf kaise karwayein:</p>
+
+                <table>
+                    <tr>
+                        <th>Urdu Tarjuma</th>
+                        <th>German Phrase</th>
+                    </tr>
+                    <tr>
+                        <td>Mera naam Hassan hai.</td>
+                        <td class="de">Ich heiße Hassan. / Mein Name ist Hassan.</td>
+                    </tr>
+                    <tr>
+                        <td>Main Pakistan se hoon.</td>
+                        <td class="de">Ich komme aus Pakistan.</td>
+                    </tr>
+                    <tr>
+                        <td>Main Lahore mein rehta hoon.</td>
+                        <td class="de">Ich wohne in Lahore.</td>
+                    </tr>
+                    <tr>
+                        <td>Aap kaise hain? (Formal)</td>
+                        <td class="de">Wie geht es Ihnen?</td>
+                    </tr>
+                    <tr>
+                        <td>Shukriya, main theek hoon.</td>
+                        <td class="de">Danke, mir geht es gut.</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- Section 4 -->
+            <section id="section4" class="card searchable">
+                <h2>4. Complete A1 Grammar Rules (گرائمر)</h2>
+                
+                <h3>A. Articles (der, die, das)</h3>
+                <p>German mein har cheez (Noun) ka ek Gender hota hai:</p>
+                <ul>
+                    <li><span class="badge">Männlich (Masculine)</span> : <strong>der</strong> (e.g., der Mann - Aadmi)</li>
+                    <li><span class="badge">Weiblich (Feminine)</span> : <strong>die</strong> (e.g., die Frau - Aurat)</li>
+                    <li><span class="badge">Sächlich (Neutral)</span> : <strong>das</strong> (e.g., das Kind - Bacha)</li>
+                    <li><span class="badge">Plural (Jama)</span> : <strong>die</strong> (e.g., die Kinder - Bachey)</li>
+                </ul>
+
+                <h3>B. Personal Pronouns & Verb Conjugation</h3>
+                <p>Verb <em>"kommen"</em> (Aana) ki gardaan:</p>
+                <div class="german-block">
+Ich komme (Main aata hoon)
+Du kommst (Tum aate ho)
+Er/Sie/Es kommt (Woh aata/aati hai)
+Wir kommen (Hum aate hain)
+Ihr kommt (Aap sab aate hain)
+Sie/sie kommen (Aap [Formal] / Woh sab aate hain)
+                </div>
+
+                <h3>C. Cases: Nominativ vs Akkusativ</h3>
+                <p>Jab koi object sentence mein direct action leta hai toh Article badal jata hai (Sirf <strong>der</strong> badalta hai <strong>den</strong> mein):</p>
+                <div class="german-block">
+Nominativ: Das ist der Tisch. (Yeh mez hai.)
+Akkusativ: Ich kaufe den Tisch. (Main mez khareedta hoon.) [der -> den]
+                </div>
+            </section>
+
+            <!-- Section 5 -->
+            <section id="section5" class="card searchable">
+                <h2>5. Vocabulary by Topics (الفاظ و معنی)</h2>
+                
+                <h3>A. Family (Familie)</h3>
+                <div class="german-block">
+der Vater (Baap) | die Mutter (Maa) | der Bruder (Bhai)
+die Schwester (Behan) | der Sohn (Beta) | die Tochter (Beti)
+                </div>
+
+                <h3>B. Food & Drinks (Essen und Trinken)</h3>
+                <div class="german-block">
+das Brot (Roti/Bread) | die Milch (Doodh) | der Apfel (Seeb)
+das Wasser (Paani) | der Kaffee (Coffee) | der Tee (Chai)
+                </div>
+            </section>
+
+            <!-- Section 6 -->
+            <section id="section6" class="card searchable">
+                <h2>6. Goethe A1 Exam Guide (4 Sections)</h2>
+                <p>Goethe A1 Exam 100 Marks ka hota hai aur 4 parts mein divide hota hai:</p>
+                
+                <ol>
+                    <li><strong>Hören (Listening - 20 mins):</strong> Audio clips sun kar multiple choice questions hal karne hote hain.</li>
+                    <li><strong>Lesen (Reading - 25 mins):</strong> Chote ads, emails aur notices padh kar True/False ya A/B mark karna hota hai.</li>
+                    <li><strong>Schreiben (Writing - 20 mins):</strong> Form bharna (Formular ausfüllen) aur ek chota email/letter likhna (approx 30 words).</li>
+                    <li><strong>Sprechen (Speaking - 15 mins):</strong>
+                        <ul>
+                            <li>Part 1: Apna ta'aruf karwana (Self Introduction).</li>
+                            <li>Part 2: Cards par likhe words se sawal poochna aur jawab dena.</li>
+                            <li>Part 3: Request/Baraaye meharbani wali baat karna (Bitto und Reaktionen).</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <div class="german-block">
+Sample Email Task:
+Sie möchten einen Deutschkurs machen. Schreiben Sie eine E-Mail an die Sprachschule.
+- Grund für das Schreiben (Likhne ki wajah)
+- Termin (Waqt/Date)
+- Preis (Qeemat)
+                </div>
+            </section>
+
+            <!-- Section 7 -->
+            <section id="section7" class="card searchable">
+                <h2>7. Practice Quiz (خود کو ٹیسٹ کریں)</h2>
+                <p>Sahi jawab par click karke test karein:</p>
+                
+                <div>
+                    <p><strong>Sawal 1: "der Tisch" ka Akkusativ kya hoga? (Ich habe ___ Tisch)</strong></p>
+                    <div class="quiz-option" onclick="checkQuiz(this, false)">A) der</div>
+                    <div class="quiz-option" onclick="checkQuiz(this, true)">B) den</div>
+                    <div class="quiz-option" onclick="checkQuiz(this, false)">C) die</div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script>
+        // Search Filter Functionality
+        function searchContent() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('searchable');
+
+            for (let i = 0; i < cards.length; i++) {
+                let text = cards[i].innerText.toLowerCase();
+                if (text.includes(input)) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+
+        // Dark / Light Mode Toggle
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Quiz Functionality
+        function checkQuiz(element, isCorrect) {
+            if (isCorrect) {
+                element.style.backgroundColor = "#d4edda";
+                element.style.color = "#155724";
+                alert("Shabash! Sahi jawab hai. (Akkusativ mein 'der' hamesha 'den' ban jata hai).");
+            } else {
+                element.style.backgroundColor = "#f8d7da";
+                element.style.color = "#721c24";
+                alert("Galat jawab! Dobara koshish karein.");
+            }
+        }
+    </script>
+</body>
+</html>
